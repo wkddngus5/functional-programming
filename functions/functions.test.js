@@ -17,3 +17,14 @@ test('map', () => {
 test('filter', () => {
   expect(filter(usersMock, ({ age }) => age > 20).length).toBe(4);
 });
+
+test('filter and map', () => {
+  function solution(collection) {
+    return map(
+      filter(collection, ({age}) => age < 30),
+      ({ id }) => id,
+    );
+  }
+
+  expect(solution(usersMock)).toStrictEqual([1, 2, 3, 4, 6]);
+});

@@ -1,0 +1,23 @@
+{
+  "name": "functional-programming",
+  "version": "1.0.0",
+  "description": "functional programming",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wkddngus5/functional-programming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wkddngus5/functional-programming/issues"
+  },
+  "homepage": "https://github.com/wkddngus5/functional-programming#readme",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}

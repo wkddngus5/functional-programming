@@ -1,8 +1,8 @@
-function map(collection, iteratee) {
+const each = require('../each');
+
+function map(collection, mapper) {
   const result = [];
-  for (const value of collection) {
-    result.push(iteratee(value));
-  }
+  each(collection, (value) => result.push(mapper(value)));
   return result;
 }
 

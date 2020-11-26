@@ -8,3 +8,5 @@ functional programming with TDD
 - keys
 - isObject
 - reduce
+- curry
+- curryr

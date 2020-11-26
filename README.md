@@ -7,3 +7,4 @@ functional programming with TDD
 - each
 - keys
 - isObject
+- reduce

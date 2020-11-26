@@ -1,6 +1,7 @@
 const map = require('./map');
 const filter = require('./filter');
 const keys = require('./keys');
+const reduce = require('./reduce');
 
 const usersMock = [
   { id: 1, name: 'user1', age: 11 },
@@ -38,4 +39,9 @@ test('keys', () => {
   expect(keys([0, 1, 2, 3, 4, 5])).toStrictEqual(['0', '1', '2', '3', '4', '5']);
   expect(keys({ a: 'aaa', b: 'bbb', c: 'ccc' })).toStrictEqual(['a', 'b', 'c']);
   expect(keys(null)).toStrictEqual([]);
+});
+
+test('reduce', () => {
+  expect(reduce(usersMock, (sum, user) => sum + user.age, 0)).toBe(126);
+  expect(reduce([1, 2, 3, 4], (sum, value) => sum + value)).toBe(10);
 });

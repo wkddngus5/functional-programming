@@ -10,3 +10,5 @@ functional programming with TDD
 - reduce
 - curry
 - curryr
+- pipe
+- go

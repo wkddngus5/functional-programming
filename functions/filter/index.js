@@ -1,3 +1,4 @@
+const curryr = require('../curryr');
 const each = require('../each');
 
 function filter(collection, predicate) {
@@ -10,4 +11,4 @@ function filter(collection, predicate) {
     return result;
 }
 
-module.exports = filter;
+module.exports = curryr(filter);

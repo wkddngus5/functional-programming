@@ -1,3 +1,4 @@
+const curryr = require('../curryr');
 const each = require('../each');
 
 function map(collection, mapper) {
@@ -6,4 +7,4 @@ function map(collection, mapper) {
   return result;
 }
 
-module.exports = map;
+module.exports = curryr(map);

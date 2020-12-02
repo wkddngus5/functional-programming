@@ -5,6 +5,7 @@ const reduce = require('./reduce');
 const curry = require('./curry');
 const curryr = require('./curryr');
 const pipe = require('./pipe');
+const go = require('./go');
 
 const usersMock = [
   { id: 1, name: 'user1', age: 11 },
@@ -74,4 +75,13 @@ test('pipe', () => {
     (collection) => map(collection, value => value * value),
   );
   expect(squareOnlyOdds([1, 2, 3, 4, 5, 6])).toStrictEqual([1, 9, 25]);
+});
+
+test('go', () => {
+  const squaredOdds = go(
+    [1, 2, 3, 4, 5, 6],
+    (collection) => filter(collection, value => value % 2),
+    (collection) => map(collection, value => value * value),
+  );
+  expect(squaredOdds).toStrictEqual([1, 9, 25]);
 });

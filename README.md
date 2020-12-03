@@ -12,3 +12,6 @@ functional programming with TDD
 - curryr
 - pipe
 - go
+
+### lazy functions
+- map

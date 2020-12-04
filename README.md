@@ -15,3 +15,4 @@ functional programming with TDD
 
 ### lazy functions
 - map
+- filter
